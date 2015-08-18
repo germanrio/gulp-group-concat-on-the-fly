@@ -1,0 +1,39 @@
+{
+  "name": "gulp-group-concat-on-the-fly",
+  "version": "1.0.0",
+  "description": "Concatenates files on the fly using regular expresions",
+  "homepage": "https://github.com/germanrio/gulp-group-concat-on-the-fly",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/germanrio/gulp-group-concat-on-the-fly.git"
+  },
+  "bugs": {
+    "url": "https://github.com/germanrio/gulp-group-concat-on-the-fly/issues"
+  },
+  "keywords": [
+    "gulpplugin",
+    "gulp",
+    "concat",
+    "group",
+    "on the fly",
+    "sourcemaps",
+    "stream",
+    "pipe"
+  ],
+  "author": {
+    "name": "German RIO",
+    "email": "german@germanrio.es",
+    "url": "http://www.germanrio.es"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "concat-with-sourcemaps": "^1.0.2",
+    "gulp-util": "^3.0.6",
+    "through2": "^0.6.5"
+  },
+  "devDependencies": {}
+}
