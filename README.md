@@ -82,8 +82,12 @@ gulp.task('locale', function() {
   return gulp.src('./src/locale/*.js')
     .pipe(groupConcat({
       getFileGroupId: function (file) {
-        var id = file.path.match(/_([a-z]{2}(?:_[A-Z]{2})?)\./)[1];
-        return (id === 'en_AU') ? null : id;
+        if (path.basename(file.path).indexOf('WIP') !== -1) {
+          return null;
+        }
+        else {
+          return file.path.match(/_([a-z]{2}(?:_[A-Z]{2})?)\./)[1];
+        }
       },
       getGroupInfo: function (id, file) {
         if (id === 'en') {
