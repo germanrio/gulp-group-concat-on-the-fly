@@ -61,6 +61,11 @@ module.exports = function(opt) {
       }
     }
 
+    this.emit('group-concat:file-processed', {
+      groupId: groupId,
+      file: file
+    });
+
     cb();
   }
 
@@ -114,6 +119,7 @@ module.exports = function(opt) {
       }
 
       this.push(joinedFile);
+      this.emit('group-concat:group-processed', id);
     }, this);
 
     cb();
