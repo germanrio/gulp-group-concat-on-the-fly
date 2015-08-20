@@ -16,26 +16,29 @@ It is useful when you can obtain the file group from some file info (path, data,
 
 ### Input source file tree
 Best way to understand how to use it is with an example. Let's suppose we have the following locale file tree:
-- src
-  - locale
-    - form-en.js
-    - form-fr_FR.js
-    - messages-en.js
-    - messages-fr_FR.js
-    - units-en.js
-    - units-en_GB.js
-    - units-en_US.js
-    - units-fr_FR.js
-    - units-WIP-en_AU.js
-
+```
+src
+└── locale
+    └── form-en.js
+    └── form-fr_FR.js
+    └── messages-en.js
+    └── messages-fr_FR.js
+    └── units-en.js
+    └── units-en_GB.js
+    └── units-en_US.js
+    └── units-fr_FR.js
+    └── units-WIP-en_AU.js
+```
 
 ### Output source file tree
 And let's suppose we are looking for this output tree:
-- dist
-  - locale
-    - app_locale-en_GB.js
-    - app_locale-en_US.js
-    - app_locale-fr_FR.js
+```
+dist
+└── locale
+    └── app_locale-en_GB.js
+    └── app_locale-en_US.js
+    └── app_locale-fr_FR.js
+```
 
 Where:
 * All `fr_FR` locales should be concatenated into the same file.
